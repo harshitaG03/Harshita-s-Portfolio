@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONT AWSOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha384-...your-sha384-here..." crossorigin="anonymous">
+</head>
+<body>
+    <!-- HEADER DESIGN -->
+     <header class="header">
+        <a href="#" class="logo">Portfolio</a>
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">HOME</a>
+            <a href="#about">ABOUT</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+     </header>
+     <!--Home Section Design-->
+     <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi,MySelf</h3>
+            <h1>Harshita Garg</h1>
+            <h3><span>I am a B.Tech Student</span></h3>
+            <div class="social-media">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <a href= "#" class="btn">Download Cv</a>
+        </div>
+        <div class="home-image">
+            <img src="Images/profile.png" alt="">
+        </div>
+    </section>
+    <!--About Section Design-->
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="Images/p1.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading"><span>About Me</span></h2>
+            <p>Hello ! I'm Harshita Garg, a passionate and dedicated BTech student
+                currently in my 4th year at Banasthali Vidyapith. I love diving into
+                the world of engineering and technology, exploring new ideas and learning
+                every step of the way. This portfolio is a glimpse into my journey,
+                showcasing my projects  I've worked on, the things I've learned as
+                I progress through my academic career. I am eager to apply my skills and
+                knowledge to tackle real-world challenges, contributing to technological
+                advancements and making a positive impact in society.</p>   
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                 </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Courses: </span><br>
+                            Object-Oriented Programming, Database Management system,SQL,
+                            Operating System,Data Structures & Algorithm</li>
+                        <li><span>Languages: </span><br>C, C++, HTML, CSS</li>
+                        <li><span>Tools: </span><br>VS code, Android Studio</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="Education">
+                    <ul>
+                        <li><span>Aug 2021-May 2025 </span><br>
+                            Bachelor of Technology in Information Technology at Banasthali Vidyapith</li>
+                        <li><span>April 2019-March 2021</span><br>
+                            Class XII from Tagore Academy Public School</li>
+                        <li><span>April 2016-march 2019</span><br>
+                            Class X from P.D.P Senior Secondary School</li>
+                    </ul>
+                </div>
+        </div>
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+    </section>
+     <!-- --------------Portfolio Section Design---------------- -->
+     <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest<span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="Images/work.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>HostelBites</h4>
+                    <p>"Developed a comprehensive mess management system using Flutter, featuring user
+                        authentication for students and wardens. The app allows students to edit profiles, mark
+                        attendance, view meal menus, provide milk preferences, offer feedback, and receive
+                        notifications. Wardens can manage students, update meal menus, monitor attendance, track
+                        milk preferences, post notices, and review feedback, enhancing efficiency and communication
+                        in the mess environment."</p>
+                        <i class="fa-solid fa-paperclip"></i>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="Images/work2.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>Tour & Travel</h4>
+                    <p>"Experience the world through our eyes with our immersive tour and travel website. Discover
+                        breathtaking destinations, curated itineraries, and seamless booking experiences tailored to
+                        your wanderlust. Let us be your guide as you embark on unforgettable journeys, creating
+                        memories that last a lifetime."</p>
+                    <i class="fa-solid fa-paperclip"></i>
+                </div>
+            </div>
+        </div>
+     </section>
+    <!-- --------------------------Contact Section------------------------>
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact<span>Me</span></h2>
+        <div class="container">
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Mobile No.:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+         </div>
+    </section>
+    <!----------------------Footer Section-----------------> 
+       <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; by Harshita Garg</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home"><i class="fa-sharp fa-solid fa-angle-up"></i></a>
+        </div>
+       </footer>
+       <!------------Main JS------------->
+       <script src="JS/main.js"></script>
+</body>
+
+</html> 
